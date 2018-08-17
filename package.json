@@ -2,15 +2,19 @@
   "name": "anydoor",
   "version": "1.0.0",
   "description": "Tiny NodeJS Static Web Server(cheap copy anywhere)",
-  "main": ".eslintrc.js",
+  "main": "src/app.js",
+  "bin": {
+    "anyDoor": "bin/anyDoor"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "init": "eslint --init"
   },
-  "pre-commit":[
-      "fix",
-      "lint"
+  "pre-commit": [
+    "fix",
+    "lint"
   ],
   "repository": {
     "type": "git",
@@ -26,5 +30,10 @@
     "babel-eslint": "^8.2.6",
     "eslint": "^5.3.0",
     "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "chalk": "^2.4.1",
+    "yargs": "^12.0.1"
   }
 }
