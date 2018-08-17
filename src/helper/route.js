@@ -58,9 +58,9 @@ module.exports = async function (req, res, filepath,conf) {
                     return {
                         file,
                         icon:mime(file)
-                    }
+                    };
                 })
-            }
+            };
             let html = ArtTemplate(tplPath, data);
             // console.log(html);
             res.end(html);
@@ -73,4 +73,4 @@ module.exports = async function (req, res, filepath,conf) {
         res.end(ex.toString());
         return;
     }
-}
+};
